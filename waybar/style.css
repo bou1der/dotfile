@@ -1,0 +1,154 @@
+@define-color backgrounddark #000000;
+@define-color main-bg-color #fdc85a;
+@define-color main-text-color #1e87be;
+@define-color active-bg-color #fdbc3e;
+@define-color active #FFFFFF; 
+@define-color white #FFFFFF;
+@define-color black #000000;
+
+@define-color invisible		rgba(0,0,0,0.0);
+@define-color bg        	#3A1C63;
+@define-color bg-active 	#522E83;
+@define-color fg		#DBCDE7;
+@define-color fg-active		#D2B3EC;
+@define-color urgent		#EFE7FF;
+@define-color font		#B694C1;
+@define-color font-active	#F0C3FF;
+@define-color violet-shade-80   rgba(58,28,99,0.8);
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+
+
+    font-family: Iosevka, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    
+}
+
+window#waybar {
+	background-color: @invisible;
+	padding:0px 20px;
+/*
+    background-color: rgba(43, 48, 59, 0.6);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    */
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    /*box-shadow: inset -5px  -3px   @font;*/
+}
+
+#workspaces {
+    background: @bg-active;
+    margin: 2px 1px 3px 1px;
+    padding: 0px 7px;
+    border-radius: 12px;
+    border: 0px;
+    font-weight: bold;
+    font-style: normal;
+    /*color: @font;*/
+}
+
+#workspaces button {
+    padding: 0px 7px 0px 8px;
+    font-size:18px;
+    margin: 4px 3px;
+    color: @font;
+    border-bottom:2px solid @invisible;
+    border-top:2px solid @invisible;
+    background-color: @invisible;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    color: @urgent;
+    background: @violet-shade-80;
+    border-radius: 9px;
+    border-bottom:2px solid @font;
+    min-width: 32px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+
+#clock {
+    background-color: @bg-active;
+    font-size: 14px;
+    border-radius: 9px;
+    color: @font;
+    padding: 1px 10px 0px 10px;
+    margin: 3px 15px 3px 0px;
+    opacity:0.87;
+}
+
+#tray {
+    padding: 0px 15px 0px 0px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#custom-cava-equalizer{
+	color:@bg-active;
+	margin:0px 40px;
+	font-family:Terminus;
+	font-size:26px;
+	padding:0px 0px 0px 0px;
+}
+
+#custom-pacman {
+	margin:2px 0px 3px 0px;
+	border-radius:6px;
+	background-color:@bg-active;
+	font-size:18px;
+	padding: 0px 8px;
+	color:@font;
+
+}
+#custom-pacman.pending-updates {
+	animation-name: blink-update;
+	animation-duration: 3s;
+}
+#custom-anicli {
+	font-family:JetBrainsMono Nerd Font;
+	color:@font;
+	border-radius: 6px;
+	font-size:20px;
+	background: @bg-active;
+	border:0px;
+	padding:0px 15px;
+	margin: 2px 0px 3px 0px;
+	
+}
+

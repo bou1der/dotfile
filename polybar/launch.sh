@@ -1,0 +1,1 @@
+/home/boulder/.config/_scripts/polybar/launch.sh

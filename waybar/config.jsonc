@@ -1,0 +1,61 @@
+// -*- mode: jsonc -*-
+[
+{
+    "layer": "top", 
+    "position": "top", 
+    "margin-top": 2,
+    "margin-bottom":-5,
+    "height": 38, 
+    "width":1440,
+    "spacing": 8, 
+    "output":"DVI-D-1",
+    "include":[
+	"~/.config/waybar/modules/main-bar-plugins.jsonc" 
+    ],
+    "modules-right":["tray","clock"],    
+    "modules-center":["custom/anicli","hyprland/workspaces","custom/pacman"],
+    "modules-left":[]
+
+}
+,
+{
+    "layer":"bottom",
+    "position":"top",
+    "margin-top":-9,
+    "margin-bottom":-51,
+    "height": 41, 
+    "spacing": 4, 
+    "output":"DVI-D-1",
+    "include":["~/.config/waybar/modules/main-bar-plugins.jsonc"],
+    "modules-center":["custom/cava-equalizer"]
+}
+/*,
+{
+    "layer":"top",
+    "position":"top",
+    "output":"DVI-D-1",
+    "margin-top":-37,
+    "margin-bottom":0,
+    "margin-right":-40,
+    "height":41,
+    "width":20,
+    "include":["~/.config/waybar/modules/main-bar-plugins.jsonc"],
+    "modules-center":["custom/pacman"]
+
+}
+
+/*{
+
+	"layer":"top",
+	"position":"right",
+	"output":"HDMI-A-1",
+	"height":   300,
+	"width":    30,
+	"spacing":  4,
+	"include":[
+		"~/.config/waybar/modules/workspaces.jsonc"
+    	] 
+//	"modules-center":["hyprland/workspaces"]
+
+}*/
+]

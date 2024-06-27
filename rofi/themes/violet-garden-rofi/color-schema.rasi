@@ -1,0 +1,11 @@
+* {
+  bg:#3A1C63;
+  fg:#DBCDE7;
+  font:#B694C1;
+  bg-active:#522E83;
+  fg-active:#D2B3EC;
+  urgent:#EFE7FF;
+  font-active:#F0C3FF;
+
+  violet-shade-80:rgba(58,28,99,0.80);
+}

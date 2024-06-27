@@ -1,0 +1,127 @@
+@import "~/.config/rofi/themes/violet-garden-rofi/color-schema.rasi"
+
+
+
+window {
+ width:740px; 
+ height:600px;
+ padding:30px 30px 40px 32px;
+
+ border:1px;
+ border-color:@fg-active;
+ border-radius:19px;
+
+ transparency:"real";
+ background-color:@violet-shade-80;
+}
+mainbox{
+    background-color:transparent;
+}
+
+inputbar{
+    children:                    ["dummy"];
+    border-radius:               9px;
+    spacing:                     0px;
+    padding:                     64px 72px;
+    background-image:            url("~/.config/rofi/themes/violet-garden-rofi/backimg.png",width);
+}
+
+dummy {
+    children: ["prompt","entry"];
+    orientation:horizontal;
+    border-radius:9px;
+    background-color:@fg;
+}
+
+prompt{
+    padding:7px 0px 5px 20px;
+    font:"JetBrainsMono Nerd Font 20";
+    margin-right:-10px;
+    background-color:@fg;
+}
+entry{
+    font:"JetBrainsMono Nerd Font BOLD 13";
+    placeholder:"Search...";
+    placeholder-color:@font;
+    text-color:@font;
+    width:424px;  
+    padding:13px 70px 11px 7px;
+    background-color:@fg;
+}
+
+
+
+/* Elements ----------------------------------------------------- */
+element {
+    children:["element-icon","element-text"]; 
+    padding:4px 0px 4px 30px;
+    border-radius:15px;
+}
+
+element normal.normal,
+element alternate.normal {
+    
+    background-color:transparent;
+}
+
+element selected.normal {
+    background-color:@fg-active;
+}
+
+
+element-text {
+    background-color:transparent;
+    text-color:@urgent;
+    padding:3px 0px 0px 0px;
+    horizontal-align:0.5;
+}
+element-icon {
+    background-color:transparent;
+    size:32px;
+}
+
+element selected{
+    background-color:@fg-active;
+    text-color:@font;
+}
+
+/* Listview ---------------------------------------------------- */
+
+listview {
+    cursor:                      "default";
+    columns:                     2;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    background-color:            transparent;
+    text-color:                  @fg;
+
+    spacing:                     4px;
+    margin:                      0px;
+    padding:                     30px 0px 0px 0px;
+}
+
+/* Scrollbar ---------------------------------------------------- */
+scrollbar {
+
+}
+
+/* Message ------------------------------------------------------ */
+message {
+}
+error-message {
+
+}
+textbox {
+
+}
+/*@media(max-aspect-ratio: 1.8) {
+    element {
+        orientation:             vertical;
+    }
+}*/

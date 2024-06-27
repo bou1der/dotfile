@@ -1,0 +1,89 @@
+{
+    "hyprland/workspaces": {
+	"format": "{icon}",
+	"on-click": "activate",
+	"all-outputs": true,
+	"format-icons": {
+	"1": " ",
+	"2": " ",
+	"3": "󰯉 ",
+	"4": " ",
+	"5": " ",
+	"6": " ",
+	"7": "󱝂 "
+        },
+	"persistent_workspaces":{
+	"1":[],
+	"2":[],
+	"3":[],
+	"4":[],
+	"5":[],
+	"6":[],
+	"7":[]
+	},
+       "sort-by-number": true
+    },
+    "custom/media": {
+        "format": "{}",
+        "return-type": "string",
+        "max-length": 40,
+        "escape": true,
+
+        "exec": "pipx run $HOME/.config/_scripts/media/waybar/polybar-now-playing.py 2> /dev/null" // Script in resources folder
+
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+     "clock": {
+        "format": "{:%H:%M %a}",
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+
+        "format-alt": "{:%Y-%m-%d}"
+
+    }, 
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    "custom/cava-equalizer":{
+	"format": "{}",
+        "return-type": "string",
+        "max-length": 40,
+        "escape": true,
+	"rotate": 180,
+	"exec":"sh $HOME/.config/_scripts/media/waybar/cava.sh",
+ 	"on-scroll-up": "pamixer -i 5",
+	"on-scroll-down": "pamixer -d 5",
+	"on-click": "playerctl play-pause",
+	"on-click-right": "playerctl next", 
+	"on-click-middle":"kitty --hold bash -c 'cava'",
+	"tooltip":false
+
+    },
+    "custom/hide-block":{
+	"format": " ",
+	"interval":"once",
+	"tooltip":false
+
+    },
+    "custom/pacman": {
+      "format": "{icon}{}",
+      "return-type": "json",
+      "format-icons": {
+        "pending-updates": "󰮯   ",
+        "updated": "   0"
+      },
+      "exec-if": "which waybar-updates",
+      "exec": "waybar-updates"
+    },
+    "custom/anicli":{
+      "format":"🐢",
+      "tooltip":false,
+      "on-click":"kitty --hold bash -c 'anicli-ru -q 1080 --m3u'"
+    }
+
+
+
+
+
+}

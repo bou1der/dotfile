@@ -1,0 +1,48 @@
+@define-color white #FFFFFF;
+@define-color black #000000;
+
+
+@define-color base #EFE8CC;
+@define-color yellow #f2c04f;
+@define-color blue #47a2d9;
+@define-color very-dark-blue #292C3B;
+@define-color dark-yellow #BA8849;
+@define-color dark-blue #476D80;
+@define-color dark-red #6a323a;
+
+
+window{
+  margin:0px; 
+  padding:0px;
+  background:linear-gradient(135deg, @dark-yellow, @dark-blue);
+  border-top-right-radius:20px;
+  border-bottom-right-radius:20px;
+}
+#outer-box{
+  padding:30px 20px ;
+}
+#inner-box{
+  padding:0px 8px;
+}
+#input{
+  padding:6px 16px;
+  border-radius:10px;
+  color:@dark-blue;
+}
+#search{
+  padding:25px 0px 0px 0px;
+  background-color:@yellow;
+}
+#entry{
+}
+
+#entry arrow {
+  border: none;
+  color: @yellow;
+}
+#entry:selected{
+  background-color:;
+  border:none;
+}
+
+

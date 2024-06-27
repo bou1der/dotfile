@@ -1,0 +1,9 @@
+configuration {
+  show-icons:true;
+  display-drun:"🐢";
+  font:"JetBrainsMono Nerd Font 14";
+  drun-display-format:"{name}";
+}
+
+
+@import "~/.config/rofi/themes/violet-garden-rofi/stylesheet.rasi"
