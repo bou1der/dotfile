@@ -20,6 +20,8 @@ return {
 					"jsonls",
 					"lua_ls",
 					"tailwindcss",
+					"clangd",
+					"pyright",
 				},
 			})
 
@@ -30,6 +32,7 @@ return {
 					"prettier",
 					"black",
 					"eslint",
+					"pyright",
 				},
 			})
 		end,
