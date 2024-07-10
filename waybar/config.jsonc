@@ -6,9 +6,9 @@
     "margin-top": 2,
     "margin-bottom": -5,
     "height": 38,
-    "width": 1440,
+    "width": 1920,
     "spacing": 8,
-    "output": "HDMI-A-1",
+    "output": "eDP-1",
     "include": [
       "~/.config/waybar/modules/main-bar-plugins.jsonc"
     ],
@@ -17,9 +17,7 @@
       "clock"
     ],
     "modules-center": [
-      "custom/anicli",
-      "hyprland/workspaces",
-      "custom/pacman"
+      "hyprland/workspaces"
     ],
     "modules-left": []
   },
@@ -30,7 +28,7 @@
     "margin-bottom": -51,
     "height": 41,
     "spacing": 4,
-    "output": "DVI-D-1",
+    "output": "eDP-1",
     "include": [
       "~/.config/waybar/modules/main-bar-plugins.jsonc"
     ],
